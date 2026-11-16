@@ -7,3 +7,23 @@ class Person:
 person1 = Person("Lina", 20)
 print(f"Name: {person1.name}")
 print(f"Age: {person1.age}")
+
+print("-------------------------")
+
+#Exercise 2: Apply Encapsulation
+class Person: 
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age #Private attribute
+
+    def get_age(self):
+        return self.__age
+
+person2 = Person("Lina", 20)
+print(f"Name: {person2.name}")
+print(f"Age: {person2.get_age()}") 
+
+#Reflection: It is better to access the private attribute age through a getter method which is get_age() to ensure encapsulation and dat protection.
+
+print("-------------------------")
+
