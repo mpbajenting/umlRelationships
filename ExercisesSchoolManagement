@@ -27,3 +27,25 @@ print(f"Age: {person2.get_age()}")
 
 print("-------------------------")
 
+#Exercise 3: Apply Inheritance
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age #Private attribute
+
+    def get_age(self):
+        return self.__age
+
+class Student(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age) 
+
+    def study(self):
+        return f"{self.name} is studying"
+
+student1 = Student("Lina", 20)
+print (f"Name: {student1.name}")
+print (f"Age: {student1.get_age()}")
+print (student1.study())
+
+print("-------------------------")
