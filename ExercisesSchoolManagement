@@ -49,3 +49,26 @@ print (f"Age: {student1.get_age()}")
 print (student1.study())
 
 print("-------------------------")
+
+#Exercise 4: Create the Teacher Class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age #Private attribute
+
+    def get_age(self):
+        return self.__age
+
+class Teacher(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+    def teach(self):
+        return f"{self.name} is teaching"
+
+teacher1 = Teacher("Mona", 30)
+print (f"Name: {teacher1.name}")
+print (f"Age: {teacher1.get_age()}")
+print (teacher1.teach())
+
+print("-------------------------")
